@@ -51,9 +51,9 @@ The other public repos are small Python utilities from earlier learning projects
 
 ### Testing
 
-Everything here is built with Claude Code. That raises the bar on testing; it
-doesn't lower it. The suites run the real scripts against a built artifact, not a
-copy, and a bug gets reproduced before it's written down as one.
+Everything at the production level here is built with the assistance of Claude Code 
+via a command line Ubuntu Linux server. The future of software development, and really 
+any and all computer management, is AI with human oversight.
 
 ### Learning
 
