@@ -1,78 +1,56 @@
 ## Thomas Nelson
 
-Infrastructure engineer. Most of the work is troubleshooting: finding out why a
-machine, a fleet or an image does not do what it should, and then building the
-tooling that makes the answer repeatable instead of a one-time fix. That spans
-firmware and BIOS, provisioning and imaging, GPU and accelerator hardware, and
-the Linux and Windows sides of each.
+Infrastructure engineer. I work out why machines don't do what they're supposed
+to, then build the tooling so nobody has to work it out twice. Firmware and BIOS,
+imaging and provisioning, GPU hardware, Linux and Windows.
 
-Currently a Hardware Applications Engineer at an industrial and medical computer
-manufacturer. Internally that is the deployment and diagnostics infrastructure
-used by order fulfillment and RMA, and the escalation point for hardware, software
-and compatibility problems across the product lines. Externally it is the
-technical side of sales and customer support: pre-sales evaluations and the
-blockers attached to them, software partner certifications, and working with
-customers on OS images and configurations that have to satisfy their own
-regulatory and operational requirements.
+Right now I'm a Hardware Applications Engineer at an industrial and medical
+computer manufacturer. I own the deployment and diagnostics infrastructure our
+benches run on and take the escalations nobody else can place. A lot of my week
+is customer-facing: pre-sales evaluations, software partner certifications, and
+getting customer images and configurations to meet their own requirements.
 
-Previously ran hardware operations for 128-node production GPU clusters serving
-customer AI training and inference workloads, covering fleet-wide firmware
-campaigns, BMC and IPMI management, InfiniBand and RoCE fabric, and bare-metal
-provisioning with MAAS. Two of the projects below come from that period.
+Before this I ran hardware operations on 128-node GPU clusters doing customer AI
+training. Firmware campaigns, BMC and IPMI, InfiniBand and RoCE, bare-metal
+provisioning with MAAS.
 
 ### Projects
 
-**[toast](https://github.com/TIsForThomas/toast)**
-A bootable USB kit sent to customers, who run it on a machine they have set up
-themselves. It generalizes the Windows installation, captures the disk with
-Clonezilla, and can redeploy that image onto a drive of a different size. Written
-to be run once, unattended, by someone who has never seen it before. The
-NTFS volume is shrunk before the block bitmap is taken, which is what makes a
-restore onto a smaller disk possible, and is returned to full size on every exit
-path. Shell and PowerShell, with 56 automated checks that run against a built ISO.
+**[toast](https://github.com/TIsForThomas/toast)** is a USB kit we send to
+customers. They run it on a machine they've set up themselves; it syspreps
+Windows, captures the disk, and can put that image back onto a smaller drive.
+NTFS has to be shrunk before the block bitmap is taken, which is the whole trick.
+Shell and PowerShell, 56 tests against a built ISO.
 
-**[ami-bios-settings](https://github.com/TIsForThomas/ami-bios-settings)**
-Decodes named BIOS settings from a raw AMI Aptio firmware image and diffs two of
-them, so configuration drift between units of the same model can be measured
-rather than estimated. Locates the firmware's compiled Setup form driver, recovers
-each question's prompt text, NVRAM store and byte offset from its IFR forms, and
-reads the values from the store. Includes sequence-based alignment for comparing
-different firmware builds, where question IDs and byte offsets are reassigned on
-recompile.
+**[ami-bios-settings](https://github.com/TIsForThomas/ami-bios-settings)** reads
+named BIOS settings out of a raw AMI Aptio firmware image and diffs two of them.
+Finds the compiled Setup form driver, pulls each question's prompt, NVRAM store
+and byte offset out of its IFR forms, then reads the value. Also aligns captures
+from different firmware builds, where a recompile renumbers everything.
 
 **[gpu-rma-diagnostics](https://github.com/TIsForThomas/gpu-rma-diagnostics)**
-Collects the system, GPU and vendor diagnostics required for an NVIDIA or AMD RMA
-in a single run. Optional field diagnostics require unloading the driver, so any
-service stopped or configuration written is registered on a revert stack that runs
-from a trap on every exit path, and is recorded in the output archive.
+gathers what NVIDIA or AMD want for an RMA in one pass. Field diagnostics need the
+driver unloaded, so anything it stops or writes goes on a revert stack that fires
+from a trap on any exit, and lands in the archive as a record.
 
-**[win11-kvm-lab](https://github.com/TIsForThomas/win11-kvm-lab)**
-A reproducible Windows 11 IoT Enterprise LTSC virtual machine on KVM with Secure
-Boot and an emulated TPM 2.0, driven over SSH and rebuildable from scripts. Gives
-deployment tooling a Windows target to be tested against from a Linux host.
+**[win11-kvm-lab](https://github.com/TIsForThomas/win11-kvm-lab)** is Windows 11
+IoT LTSC on KVM with Secure Boot and an emulated TPM, driven over SSH, rebuilt
+from scripts. Gives me a Windows target to test against from Linux.
 
-**[gpu-scripts](https://github.com/TIsForThomas/Gpu-scripts)**
-Health checks for NVIDIA and AMD GPU nodes: driver state, thermals, power, ECC
-counters, CUDA bandwidth, and log collection.
+**[gpu-scripts](https://github.com/TIsForThomas/Gpu-scripts)** is health checks for
+NVIDIA and AMD nodes. Driver state, thermals, power, ECC counters, CUDA bandwidth,
+log collection.
 
-The remaining public repositories are small Python utilities from earlier
-learning projects.
+The other public repos are small Python utilities from earlier learning projects.
 
-### How these were built
+### How I build
 
-My production projects are built with the assistance of Claude Code. I treat it
-as a standard part of the toolchain rather than a novelty, and I expect most
-software development to work this way before long. The leverage is substantial,
-and it moves the constraint off how quickly code can be written and onto how
-carefully it gets verified.
+All my production work is done with Claude Code. It's part of the toolchain now
+and I think most development ends up there. It also means I ship more code than I
+used to, so I test more of it. These repos come with suites that run the real
+scripts, and I reproduce a bug before I write it down as one.
 
-Which is why verification is visible in these repositories rather than assumed.
-They ship with test suites that exercise the real scripts against a built
-artifact rather than a copy of them, and a defect is reproduced before it is
-written down as one.
+### Learning
 
-### Currently working on
-
-Electrical engineering fundamentals including PCB design, schematic reading,
-signal integrity and DC power delivery, alongside Kubernetes, Terraform and
-Ansible.
+Electrical engineering fundamentals: PCB design, schematics, signal integrity,
+DC power delivery. Kubernetes, Terraform, Ansible.
