@@ -7,9 +7,13 @@ firmware and BIOS, provisioning and imaging, GPU and accelerator hardware, and
 the Linux and Windows sides of each.
 
 Currently a Hardware Applications Engineer at an industrial and medical computer
-manufacturer, responsible for the deployment and diagnostics infrastructure used
-by order fulfillment and RMA, and the escalation point for hardware, software and
-compatibility problems across the product lines.
+manufacturer. Internally that is the deployment and diagnostics infrastructure
+used by order fulfillment and RMA, and the escalation point for hardware, software
+and compatibility problems across the product lines. Externally it is the
+technical side of sales and customer support: pre-sales evaluations and the
+blockers attached to them, software partner certifications, and working with
+customers on OS images and configurations that have to satisfy their own
+regulatory and operational requirements.
 
 Previously ran hardware operations for 128-node production GPU clusters serving
 customer AI training and inference workloads, covering fleet-wide firmware
@@ -19,8 +23,10 @@ provisioning with MAAS. Two of the projects below come from that period.
 ### Projects
 
 **[toast](https://github.com/TIsForThomas/toast)**
-A bootable USB kit that generalizes a configured Windows installation, captures
-the disk with Clonezilla, and redeploys it onto a drive of a different size. The
+A bootable USB kit sent to customers, who run it on a machine they have set up
+themselves. It generalizes the Windows installation, captures the disk with
+Clonezilla, and can redeploy that image onto a drive of a different size. Written
+to be run once, unattended, by someone who has never seen it before. The
 NTFS volume is shrunk before the block bitmap is taken, which is what makes a
 restore onto a smaller disk possible, and is returned to full size on every exit
 path. Shell and PowerShell, with 56 automated checks that run against a built ISO.
