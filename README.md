@@ -1,12 +1,18 @@
 ## Thomas Nelson
 
 Infrastructure engineer. Most of what I do sits between the hardware and the
-operating system: GPU cluster operations, firmware, bare-metal provisioning, and
-the diagnostic tooling that tells you which of those three is actually broken.
+operating system: firmware, drivers, bare-metal provisioning, and the diagnostic
+tooling that tells you which of those three is actually broken.
 
-Recently that has meant keeping 128-node production GPU clusters running for
-customer AI training workloads, and building a deployment and diagnostics
-environment from scratch for an industrial hardware manufacturer.
+These days that means industrial and medical hardware. I built the deployment and
+diagnostics environment our order fulfillment and RMA benches run on, write and
+recompile drivers for Linux and Windows, benchmark AI accelerators, and act as the
+escalation point when something does not work and nobody can say why.
+
+Before that I ran hardware operations for 128-node production GPU clusters serving
+customer AI training and inference workloads: fleet-wide firmware campaigns, BMC
+and IPMI management, InfiniBand and RoCE fabric, and bare-metal provisioning. Two
+of the projects below come from that period.
 
 ### What I tend to build
 
