@@ -16,11 +16,17 @@ provisioning with MAAS.
 
 ### Projects
 
-**[toast](https://github.com/TIsForThomas/toast)** is a USB kit we send to
-customers. They run it on a machine they've set up themselves; it syspreps
-Windows, captures the disk, and can put that image back onto a smaller drive.
-NTFS has to be shrunk before the block bitmap is taken, which is the whole trick.
-Shell and PowerShell, 56 tests against a built ISO.
+**[toast](https://github.com/TIsForThomas/toast)** is a purpose-built suite for
+sysprepping and capturing Windows images, on one bootable USB. We send it to
+customers. They set a machine up the way they want it, run one file, then boot
+the stick. It generalizes Windows, builds the answer file out of their answers,
+captures the disk and powers off. Four steps and a one-page guide on the drive.
+
+It doubles as recovery media. Once their image is on the drive, that drive puts
+it back onto a unit whose SSD was swapped or died, and the replacement doesn't
+have to match the original size. NTFS gets shrunk before the block bitmap is
+taken, which is what makes the smaller-disk restore possible at all. Shell and
+PowerShell, 56 tests against a built ISO.
 
 **[ami-bios-settings](https://github.com/TIsForThomas/ami-bios-settings)** reads
 named BIOS settings out of a raw AMI Aptio firmware image and diffs two of them.
