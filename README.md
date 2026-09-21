@@ -49,12 +49,11 @@ log collection.
 
 The other public repos are small Python utilities from earlier learning projects.
 
-### How I build
+### Testing
 
-All my production work is done with Claude Code. It's part of the toolchain now
-and I think most development ends up there. It also means I ship more code than I
-used to, so I test more of it. These repos come with suites that run the real
-scripts, and I reproduce a bug before I write it down as one.
+Everything here is built with Claude Code. That raises the bar on testing; it
+doesn't lower it. The suites run the real scripts against a built artifact, not a
+copy, and a bug gets reproduced before it's written down as one.
 
 ### Learning
 
