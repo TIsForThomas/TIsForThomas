@@ -47,6 +47,14 @@ counters, CUDA bandwidth, and log collection.
 
 The remaining public repositories are small Python utilities from earlier work.
 
+### How these were built
+
+These repositories were built with Claude Code, which is how I work on software
+now. Verification is part of that rather than an afterthought: the test suites in
+`toast` and `gpu-rma-diagnostics` run the real scripts against a built artifact
+rather than a copy of them, and every defect described in the
+`gpu-rma-diagnostics` README was reproduced before it was written down.
+
 ### Currently working on
 
 Electrical engineering fundamentals including PCB design, schematic reading,
