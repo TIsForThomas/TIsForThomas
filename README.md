@@ -1,11 +1,15 @@
 ## Thomas Nelson
 
-Infrastructure engineer working between hardware and the operating system:
-firmware, drivers, bare-metal provisioning, and hardware diagnostics.
+Infrastructure engineer. Most of the work is troubleshooting: finding out why a
+machine, a fleet or an image does not do what it should, and then building the
+tooling that makes the answer repeatable instead of a one-time fix. That spans
+firmware and BIOS, provisioning and imaging, GPU and accelerator hardware, and
+the Linux and Windows sides of each.
 
 Currently a Hardware Applications Engineer at an industrial and medical computer
 manufacturer, responsible for the deployment and diagnostics infrastructure used
-by order fulfillment and RMA, and for escalation support across the product lines.
+by order fulfillment and RMA, and the escalation point for hardware, software and
+compatibility problems across the product lines.
 
 Previously ran hardware operations for 128-node production GPU clusters serving
 customer AI training and inference workloads, covering fleet-wide firmware
