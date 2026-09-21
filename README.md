@@ -5,8 +5,7 @@ operating system: firmware, drivers, bare-metal provisioning, and the diagnostic
 tooling that tells you which of those three is actually broken.
 
 These days that means industrial and medical hardware. I built the deployment and
-diagnostics environment our order fulfillment and RMA benches run on, write and
-recompile drivers for Linux and Windows, benchmark AI accelerators, and act as the
+diagnostics environment our order fulfillment and RMA benches run on, and act as the
 escalation point when something does not work and nobody can say why.
 
 Before that I ran hardware operations for 128-node production GPU clusters serving
