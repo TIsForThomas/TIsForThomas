@@ -5,10 +5,10 @@ to, then build the tooling so nobody has to work it out twice. Firmware and BIOS
 imaging and provisioning, GPU hardware, Linux and Windows.
 
 Right now I'm a Hardware Applications Engineer at an industrial and medical
-computer manufacturer. I own the deployment and diagnostics infrastructure our
-benches run on and take the escalations nobody else can place. A lot of my week
+computer manufacturer. I own and manage the deployment and diagnostics infrastructure 
+every unit on every bench runs on and take the senior escalations. A lot of my week
 is customer-facing: pre-sales evaluations, software partner certifications, and
-getting customer images and configurations to meet their own requirements.
+getting customer images and unit configurations to meet their requirements.
 
 Before this I ran hardware operations on 128-node GPU clusters doing customer AI
 training. Firmware campaigns, BMC and IPMI, InfiniBand and RoCE, bare-metal
