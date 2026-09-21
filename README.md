@@ -55,20 +55,21 @@ deployment tooling a Windows target to be tested against from a Linux host.
 Health checks for NVIDIA and AMD GPU nodes: driver state, thermals, power, ECC
 counters, CUDA bandwidth, and log collection.
 
-The remaining public repositories are small Python utilities from earlier work.
+The remaining public repositories are small Python utilities from earlier
+learning projects.
 
 ### How these were built
 
-These repositories were built with the assistance of Claude Code. I treat it as a
-standard part of the toolchain rather than a novelty, and I expect most software
-development to work this way before long. The leverage is substantial, and it
-moves the constraint off how quickly code can be written and onto how carefully
-it gets verified.
+My production projects are built with the assistance of Claude Code. I treat it
+as a standard part of the toolchain rather than a novelty, and I expect most
+software development to work this way before long. The leverage is substantial,
+and it moves the constraint off how quickly code can be written and onto how
+carefully it gets verified.
 
 Which is why verification is visible in these repositories rather than assumed.
-The test suites in `toast` and `gpu-rma-diagnostics` run the real scripts against
-a built artifact rather than a copy of them, and every defect described in the
-`gpu-rma-diagnostics` README was reproduced before it was written down.
+They ship with test suites that exercise the real scripts against a built
+artifact rather than a copy of them, and a defect is reproduced before it is
+written down as one.
 
 ### Currently working on
 
