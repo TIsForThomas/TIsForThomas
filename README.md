@@ -59,10 +59,15 @@ The remaining public repositories are small Python utilities from earlier work.
 
 ### How these were built
 
-These repositories were built with Claude Code, which is how I work on software
-now. Verification is part of that rather than an afterthought: the test suites in
-`toast` and `gpu-rma-diagnostics` run the real scripts against a built artifact
-rather than a copy of them, and every defect described in the
+These repositories were built with the assistance of Claude Code. I treat it as a
+standard part of the toolchain rather than a novelty, and I expect most software
+development to work this way before long. The leverage is substantial, and it
+moves the constraint off how quickly code can be written and onto how carefully
+it gets verified.
+
+Which is why verification is visible in these repositories rather than assumed.
+The test suites in `toast` and `gpu-rma-diagnostics` run the real scripts against
+a built artifact rather than a copy of them, and every defect described in the
 `gpu-rma-diagnostics` README was reproduced before it was written down.
 
 ### Currently working on
